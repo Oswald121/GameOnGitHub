@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using GameOnGitHub.Models; // <- change if your namespace differs
 using Microsoft.EntityFrameworkCore;
 
-namespace GameOnGitHub.Data
+namespace GameOnGitHub.Data; // <- change to your project namespace
+
+public class GameDbContext : DbContext
 {
     public GameDbContext(DbContextOptions<GameDbContext> options) : base(options) { }
 
